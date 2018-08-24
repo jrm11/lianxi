@@ -1,0 +1,293 @@
+﻿@charset "UTF-8";
+body,
+dd,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+li,
+ol,
+ul,
+p,
+td,
+th {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 14px/1.5 "微软雅黑", arial, "宋体";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+a:focus {
+    -moz-outline-style: none;
+}
+
+a:active,
+a:hover {
+    text-decoration: none;
+    outline-width: 0;
+}
+
+
+/*2016-12-29*/
+
+button,
+html input[type=button],
+input[type=submit] {
+    cursor: pointer
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+/*解决ie7 以下value值的增多两边留白也会随着增多*/
+
+input,
+button {
+    *overflow: visible;
+}
+
+
+/*
+ * 去除FF3+内补丁和内边框
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/**
+ * 1. 修正所有浏览器中字体不继承的问题
+ * 2. 修正所有浏览器中字号不继承的问题
+ * 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题
+ * 4. 改善在所有浏览器下的垂直对齐方式
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+    vertical-align: baseline;
+    /* 4 */
+    *vertical-align: middle;
+    /* 4 */
+}
+
+
+/**
+ * 重置按钮禁用时光标样式
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+
+/**
+ * 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题
+ * 2. 移除 IE 8/9 中多余的内边距
+ * 3. 移除 IE7 中多余的内边距(IE6 中任然存在)
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+    *height: 13px;
+    /* 3 */
+    *width: 13px;
+    /* 3 */
+}
+
+
+/**
+ * 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题
+ * 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box;
+}
+
+
+/**
+ * 修正 Chrome 中 input [type="number"] 在特定高度和 font-size 时,
+ * 下面一个箭头光标变成「cursor: text」
+ * @demo: http://jsfiddle.net/FFXEc/
+ * 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+
+/*
+ * 1. 让FF,S5,Chrome下的textarea只能纵向拉伸高度, 避免因拉伸而影响布局
+ * 2. 去掉IE下默认的滚动条占位
+ * 3. 默认textarea与文本baseline对齐，导致文本沉在下面比较难看，这里统一与文本顶对齐
+ */
+
+textarea {
+    resize: vertical;
+    /*1*/
+    overflow: auto;
+    /*2*/
+    vertical-align: top;
+    /*3*/
+}
+
+
+/**
+ * 修正 Chrome 30- option 中文字无法显示的问题
+ * http://jsbin.com/avujas/1/edit 
+ */
+
+select:disabled option:checked,
+option:disabled:checked {
+    color: #ddd;
+}
+
+
+/**
+ * label 元素给予手型，暗示此处可点击
+ */
+
+label {
+    cursor: pointer;
+}
+
+
+/**
+ * 统一 select 样式, Firefox 中有 padding:1px 0
+ * http://jsbin.com/avujas/1/edit
+ */
+
+select[size],
+select[multiple],
+select[size][multiple] {
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+input:focus{
+    outline: none;
+}
