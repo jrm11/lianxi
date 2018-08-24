@@ -1,0 +1,53 @@
+@charset "UTF-8";
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*导航栏样式 start*/
+.nav{
+    height: 80px;
+    line-height:80px;
+    background: #333333;
+    font-size: 18px;
+    
+}
+
+.nav li {
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    line-height:80px;
+    text-align: center;
+    transition: .3s;
+    margin-left: 2%;
+}
+
+.nav li:hover{
+    background: #0099ff;
+}
+.nav li a {
+    color:#fff;
+    display: block;
+}
+
+.nav li .child-nav li{
+    float: left;
+    background: rgb(17,94,176);
+    height: 30px;
+    line-height:30px;
+    border-bottom: 1px solid #a3cadd;
+}
+
+.nav .nav-item ul{
+    display: none;
+    position: absolute;
+    top:80px;
+}
+
+/*下拉菜单样式 start*/
+/*.nav .nav-item:hover ul{
+    display: block;
+}*/
